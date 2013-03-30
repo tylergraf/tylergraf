@@ -1,0 +1,40 @@
+.blog-wrapper {
+  max-width: 640px; 
+}
+.post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+}
+.post-body p,
+.posts-tagged-heading,
+.post .post-heading,
+.post .post-link,
+.post .post-date {
+  margin-left: 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+
+.post .photoset-image {
+  margin-bottom: 4%;
+  float: left;
+  width: 46%;
+  margin-right: 4%;
+  overflow: hidden;
+}
+.tags {
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-family: "proxima-nova-extra-condensed";
+  font-weight: 600;
+}
+.posts-tagged-heading {
+  font-weight: normal;
+}
+.next-page {
+  float: right;
+}

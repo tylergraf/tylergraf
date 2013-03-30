@@ -1,0 +1,143 @@
+<% page = {title: 'Blog'} %>
+<% assets = {
+  css: [
+  'blog.css',
+  'lib/jquery.fancybox.css'
+  ],
+  js: [
+  'lib/jquery.fancybox.pack.js',
+  'fancybox-blog.js',
+  'image-resizer.js',
+  ]
+} %>
+
+<div class="blog-wrapper">
+
+  
+
+  <% if(typeof pageType !== 'undefined'){ %> 
+    <h2 class="posts-tagged-heading">POSTS TAGGED: <%= tag %></h2>  
+  <% } %>
+  
+
+  <% posts.forEach(function(post){ %>
+    <div class="post">
+
+      <%//<!--*********** TEXT ************-->%>
+      <% if(post.type === 'text'){ %>
+
+        <% if(post.title !== undefined && post.title !== null){ %>
+          <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>"><%= post.title %></a></h2>
+        <% } else { %> 
+          <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>">Thought</a></h2>
+        <% } %>
+        <p class="post-date"><%- post.moment %></p>
+        <div class="post-body clearfix">
+          <p><%- post.body %></p>
+        </div>
+      <% } %>
+      
+      
+      
+      <%//<!--*********** LINK ************-->%>
+      <% if(post.type === 'link'){ %>
+
+        <% if(post.title !== undefined && post.title !== null){ %>
+          <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>"><%= post.title %></a></h2>
+        <% } %>
+        <p class="post-date"><%- post.moment %></p>
+       
+        <p class="post-link">Link: <a href="<%- post.url %>">Check it out &#8594;</a></p>
+       
+        <% if(post.body){ %>
+
+        <div class="post-body clearfix">
+          <p><%- post.body %></p>
+        </div>
+
+        <% } else if(post.description){  %>
+
+        <div class="post-body clearfix">
+          <p><%- post.description %></p>
+        </div>
+        <% } %>
+      <% } %>
+
+      
+      <%//<!--*********** QUOTE ************-->%>
+      <% if(post.type === 'quote'){ %>
+
+        <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>">Quote</a></h2>
+        <p class="post-date"><%- post.moment %></p>
+        <div class="post-body clearfix">
+          <p>&ldquo;<%- post.text %>&rdquo;</p>
+          <p>&mdash; <%- post.source %></p>
+        </div>
+      <% } %>
+
+      
+      <%//<!--*********** VIDEO ************-->%>
+      <% if(post.type === 'video'){ %>
+
+        <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>">Video</a></h2>
+        <p class="post-date"><%- post.moment %></p>
+        
+        <div class="post-body clearfix">
+          <%- post.player[2].embed_code %>
+          <p><%- post.caption %></p>
+        </div>
+      <% } %>
+
+      
+      <%//<!--*********** PHOTO ************-->%>
+      <% if(post.type === 'photo'){ %>
+
+        <h2 class="post-heading"><a href="/blog/<%= post.id %>/<%= post.slug %>">Photo</a></h2>
+        <p class="post-date"><%- post.moment %></p>
+        
+      <% if(post.photos.length > 1){ %>
+        
+        <div class="photoset row-fluid">
+          <% post.photos.forEach(function(photo){ %>
+          <a class="photoset-image fancybox" rel="post<%- post.id %>" href="<%- photo.alt_sizes[0].url %>"><img src="<%- photo.alt_sizes[0].url %>"></a>
+          <% }) %>
+        </div>
+      <% } else if(post.photos.length > 0){ %>
+
+        <a class="single-image fancybox" href="<%- post.photos[0].alt_sizes[0].url %>"><img src="<%- post.photos[0].alt_sizes[0].url %>"></a>
+
+      <% } %>
+        <div class="post-body clearfix">
+          <p><%- post.caption %></p>
+        </div>
+      <% } %>
+
+
+      <% if(post.tags.length > 0){ %>
+      <div class="tags">
+        <span class="tags-label">tags:</span>
+        <% post.tags.forEach(function(tag){ %>
+        
+          <span class="tag"><a href="/blog/tag/<%= tag %>"><%= tag %></a></span>
+
+        <% }) %>
+      </div>
+      <% } %>
+      
+      <div class="fb-comments" data-href="http://blog.tylergraf.com/blog/<%= post.id %>/<%= post.slug %>" data-width="640" data-num-posts="10"></div>
+
+    </div>
+  <% }) %>
+  
+
+  <% if(totalPosts > 1){ %>
+    <div class="pagination">
+      <% if(pageNumber > 1){ %>
+      <a href="/blog/page/<%= pageNumber - 1 %>" class="prev-page">Previous Page</a>
+      <% } %>
+      <% if(totalPosts >= (pageNumber -1) * 10){ %>
+      <a href="/blog/page/<%= pageNumber + 1 %>" class="next-page">Next Page</a>
+      <% } %>
+    </div>
+  <% } %>
+</div>
