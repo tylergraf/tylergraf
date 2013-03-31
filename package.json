@@ -23,7 +23,7 @@
   "dist": {
     "shasum": "060a49ef51478e7c57561c363e175b974497eef8"
   },
-  "subdomain": "habits",
+  "subdomain": "tylergraf",
   "engines": {
     "node": "0.8.x"
   }

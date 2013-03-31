@@ -9,7 +9,7 @@ var Tumblr = require('tumblr').Tumblr
 /**
  * 
  */
-var blog = new Tumblr('solenoled.tumblr.com', 'dIhAnxldxbsglBGNVV44pUdXesW9DcjMRfcSVey0lXg9VAQmsN');
+var blog = new Tumblr('solenoled.tumblr.com', process.env.TUMBLR_KEY);
 
 
 /**
