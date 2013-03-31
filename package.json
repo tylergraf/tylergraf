@@ -1,10 +1,10 @@
 {
   "name": "tylergraf",
   "author": {
-    "name": "Nodejitsu Inc.",
-    "email": "support@nodejitsu.com"
+    "name": "Tyler Graf",
+    "email": "tylergraf@gmail.com"
   },
-  "version": "0.1.2-10",
+  "version": "0.1.2-12",
   "scripts": {
     "start": "node app.js"
   },
@@ -24,6 +24,9 @@
     "shasum": "060a49ef51478e7c57561c363e175b974497eef8"
   },
   "subdomain": "tylergraf",
+  "domains": [
+    "tylergraf.com",
+  ],
   "engines": {
     "node": "0.8.x"
   }
