@@ -1,0 +1,25 @@
+<% page = {title: 'Film',slug:'film'} %>
+<% assets = {
+  css: [
+  'film.css',
+  'lib/jquery.fancybox.css'
+  ],
+  js: [
+  'lib/jquery.fancybox.pack.js',
+  'fancybox-blog.js',
+  'image-resizer.js',
+  ]
+} %>
+
+<div class="films-wrapper">
+
+  <% films.forEach(function(film){ %>
+  <div class="film">
+    <h2 class="film-title"><%= film.title %></h2>
+    <a href="/film/<%= film.id %>/<%= film.title %>" class="film-image-wrapper">
+      <img class="film-image" src="<%= film.thumbnail_large %>" alt="<%= film.title %>">
+    </a>
+  </div>
+  <% }) %>
+  
+</div>

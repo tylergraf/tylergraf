@@ -1,0 +1,23 @@
+.films-wrapper .film {
+  float: left;
+  width: 25%;
+}
+
+.film-title {
+  margin-left: 0;
+}
+
+.film .film-image-wrapper {
+  height: 166px;
+  overflow: hidden;
+}
+
+
+.film .film-iframe {
+  width: 100%;
+  height: 600px;
+}
+.film .film-iframe iframe {
+  width: 100% !important;
+  height: 600px !important;
+}

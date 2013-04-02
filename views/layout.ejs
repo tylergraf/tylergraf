@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="/css/lib/bootstrap-responsive.min.css">
   <link rel="stylesheet" type="text/css" href="/css/core.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/icons.css">
   <% if(typeof assets != "undefined" && assets.css) { %>
     <% for(var filename in assets.css) { %>
       <link rel="stylesheet" type="text/css" href="/css/<%= assets.css[filename] %>">
@@ -28,22 +29,22 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="page page-skin-1 page-skin-ext-blog">
+<div class="page page-skin-1 page-skin-ext-<%= page.slug %>">
   <div class="line">
     <header>
       <div class="page-header">
         <div class="unit size1of3">
         <h1><a href="/">Tyler Graf</a></h1>
 
-        <h2><a href="/blog">blog</a></h2>        </div>
+        <h2><a href="/<%= page.slug %>"><%= page.slug %></a></h2>        </div>
         <div class="unit size2of3">
                   <nav class="nav page-nav-skin-header">
             <ul class="menu menu-skin-header">
-              <li class="menu-item film"><h2><i></i><span>film</span></h2><a href="/film"></a></li>
-              <li class="menu-item photo "><h2><i></i><span>photo</span></h2><a href="/photo"></a></li>
-              <li class="menu-item design "><h2><i></i><span>design</span></h2><a href="/design"></a></li>
-              <li class="menu-item about "><h2><i></i><span>about</span></h2><a href="/about"></a></li>
-              <li class="menu-item blog "><h2><i></i><span>blog</span></h2><a href="/blog"></a></li>
+              <li class="menu-item blog "><a href="/blog"><i class="icon tg-icon-blog"></i></a></li>
+              <li class="menu-item film"><a href="/film"><i class="icon tg-icon-video"></i></a></li>
+              <!-- <li class="menu-item photo "><a href="/photo"><i class="icon tg-icon-photo"></i></a></li> -->
+              <!-- <li class="menu-item design "><a href="/design"><i class="icon tg-icon-screen"></i></a></li> -->
+              <!-- <li class="menu-item about "><a href="/about"><i class="icon tg-icon-profile"></i></a></li> -->
             </ul>
           </nav>
           
