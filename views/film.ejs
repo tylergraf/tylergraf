@@ -5,9 +5,7 @@
   'lib/jquery.fancybox.css'
   ],
   js: [
-  'lib/jquery.fancybox.pack.js',
-  'fancybox-blog.js',
-  'image-resizer.js',
+  'iframe-resizer.js'
   ]
 } %>
 
@@ -18,5 +16,5 @@
     <div class="film-iframe"><%- film.html %></div>
     <p class="description"><%- film.description %></p>
   </div>
-  <div class="fb-comments" data-href="http://tylergraf.com/film/<%= film.video_id %>/<%= film.title %>" data-width="640" data-num-posts="10"></div>
+  <div class="fb-comments" data-href="http://tylergraf.com/film/<%= film.video_id %>/<%= film.title %>" data-width="10" data-num-posts="10"></div>
 </div>

@@ -17,12 +17,24 @@ $(document).ready(function() {
 
   }
 
+  function resizeComments(_this){
+    var iframeWidth = _this.width();
+    _this.find('iframe').width(iframeWidth);
+  }
+
+
   resizeImages();
   resizeIframe($('iframe'));
   resizeIframe($('embed'));
 
+  setTimeout(function(){
+    resizeComments($('.fb-comments'));
+  },500);
+
+
   $(window).resize(function(){
     resizeImages();
+    resizeComments($('.fb-comments'));
 
     resizeIframe($('iframe'));
     resizeIframe($('embed'));

@@ -1,37 +1,36 @@
-.films-wrapper .film {
+.photos-wrapper .photoset {
   float: left;
   width: 25%;
 }
+.photos-wrapper .photoset.photo {
+  margin-bottom: 15px;
+}
 
-.film-title {
+.photoset-title {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.film .film-image-wrapper {
-  height: 166px;
+.photoset .photoset-image-wrapper {
   overflow: hidden;
   display: block;
   padding: 0 15px 0 0;
 }
 
 .fb-comments,
-.film .film-iframe {
+.photoset .photoset-iframe {
   width: 100% !important ;
 }
 
 @media (max-width: 767px) {
-  .films-wrapper .film {
+  .photos-wrapper .photoset {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  .films-wrapper .film {
+  .photos-wrapper .photoset {
     width: 50%;
-  }
-  .film .film-image-wrapper {
-    height: 110px;
   }
 }

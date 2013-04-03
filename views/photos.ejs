@@ -1,0 +1,24 @@
+<% page = {title: 'Photos', slug:'photo'} %>
+<% assets = {
+  css: [
+  'photo.css',
+  'lib/jquery.fancybox.css'
+  ],
+  js: [
+  'lib/jquery.fancybox.pack.js',
+  'fancybox-blog.js',
+  'photo-resizer.js',
+  ]
+} %>
+
+<div class="photos-wrapper">
+
+   <% photoset.photo.forEach(function(photo){ %>
+  <div class="photoset photo">
+    <a class="photoset-image-wrapper fancybox" rel="photoset-<%= photoset.id %>" href="http://farm<%= photo.farm %>.staticflickr.com/<%= photo.server %>/<%= photo.id %>_<%= photo.secret %>_b.jpg">
+      <img class="photoset-image" src="http://farm<%= photo.farm %>.staticflickr.com/<%= photo.server %>/<%= photo.id %>_<%= photo.secret %>.jpg" alt="<%= photo.title %>">
+    </a>
+  </div>
+  <% }) %>
+
+</div>

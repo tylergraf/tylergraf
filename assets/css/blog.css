@@ -17,7 +17,9 @@
 .post:last-child {
   border-bottom: none;
 }
-
+.fb-comments {
+  width: 100%;
+}
 
 .post .photoset-image {
   margin-bottom: 4%;

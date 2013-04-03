@@ -15,7 +15,7 @@
 
   <% films.forEach(function(film){ %>
   <div class="film">
-    <h2 class="film-title"><%= film.title %></h2>
+    <h2 class="film-title"><a href="/film/<%= film.id %>/<%= film.title %>"><%= film.title %></a></h2>
     <a href="/film/<%= film.id %>/<%= film.title %>" class="film-image-wrapper">
       <img class="film-image" src="<%= film.thumbnail_large %>" alt="<%= film.title %>">
     </a>
