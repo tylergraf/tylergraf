@@ -114,6 +114,11 @@ textarea {width: 100%; }
 .menu-item {background: #999; border-radius: 60px; height: 60px; width: 60px; list-style: none; cursor: pointer;}
 .page-nav-skin-header .menu-item {height: 40px; width: 40px; border-radius: 40px;}
 .page-nav-skin-header .menu-item:last-child {margin-right: 0;}
+.page-nav-skin-header .menu-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 
 .menu-item:hover {opacity: 0.9;}
 .page-nav-skin-header .menu-skin-header .menu-item {

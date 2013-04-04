@@ -48,8 +48,7 @@ function photosets(req, res, next) {
 function photos(req, res, next) {
   var photosetId = req.params.id
   flickr.photosets.getPhotos(photosetId,{},function(error, photoset) {
-    console.log(photoset);
-    
+        
     res.locals({
       photoset: photoset
     });

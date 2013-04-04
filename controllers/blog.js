@@ -30,6 +30,10 @@ module.exports = function(app) {
     res.render('posts',{title:'Posts'});
   });
 
+  app.get("/post/:id/:slug", post, function(req, res, next) {
+    res.redirect('/blog/'+req.params.id+'/'+req.params.slug);
+  });
+  
   app.get("/blog/:id/:slug", post, function(req, res, next) {
     res.render('posts',{title:'Posts'});
   });
