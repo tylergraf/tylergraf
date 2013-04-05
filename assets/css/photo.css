@@ -18,6 +18,9 @@
   display: block;
   padding: 0 15px 0 0;
 }
+.photoset .photoset-image {
+  background: #eaeaea;
+}
 
 .fb-comments,
 .photoset .photoset-iframe {
