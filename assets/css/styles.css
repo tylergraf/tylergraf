@@ -7,7 +7,7 @@
 -----------------------------------------------------*/
 
 /*html {overflow: auto;overflow: auto;}*/
-body { font:18px/1.62  "chaparral-pro","Perpetua Std","Proxima Nova", Helvetica, Arial, sans-serif; color: #444444; }
+body { font:18px/1.62  "Roboto Slab","Perpetua Std","Proxima Nova", Helvetica, Arial, sans-serif; color: #444444; }
 
 h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote,pre,address,.field, .mod, table, .tabset  {margin:10px 20px;}
 /*.media .media-block{margin-left:10px}*/
@@ -22,12 +22,12 @@ a:hover {}
 ::selection { background:#4089b5; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #edbb54; }
 
-h1, .h1{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:228.5%;  line-height:1.25; font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
-h2, .h2{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:160%;    line-height:1.25; font-weight:600; font-style: normal; color:#222;text-rendering: geometricPrecision;}
-h3, .h3{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:150%;    line-height:1.5;  font-weight:500; font-style: normal; color:#222;text-rendering: geometricPrecision;}
-h4, .h4{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:150%;    line-height:1.5;  font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
-h5, .h5{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:100%;    line-height:1.5;  font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
-h6, .h6{font-family: "proxima-nova-extra-condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:100%;    line-height:1.5;  font-weight:100; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h1, .h1{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:228.5%;  line-height:1.25; font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h2, .h2{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:160%;    line-height:1.25; font-weight:600; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h3, .h3{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:150%;    line-height:1.5;  font-weight:500; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h4, .h4{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:150%;    line-height:1.5;  font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h5, .h5{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:100%;    line-height:1.5;  font-weight:200; font-style: normal; color:#222;text-rendering: geometricPrecision;}
+h6, .h6{font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif; text-transform: uppercase; font-size:100%;    line-height:1.5;  font-weight:100; font-style: normal; color:#222;text-rendering: geometricPrecision;}
 
 
 input:focus, textarea:focus, select:focus {border: 1px solid #ccc; box-shadow: none;outline: medium none;}
